@@ -19,6 +19,7 @@ nav {
     background-color: darkslateblue;
     height: 44px;
     padding: 0 40px;
+    text-align: center;
 }
 
 nav ul,
@@ -45,14 +46,14 @@ nav ul li a:hover  {
 }
 
 div.hero {
-    height: 350px;
+    height: 520px;
     /* background-color: #b4c6f0; */
     background-color: rgba(128, 128, 128, 0.303);
     background-image: url('../images/puter.jpg');
-    background-size: 500px;
+    background-size: 420px;
     background-repeat: no-repeat;
     background-position: center bottom;
-    padding-top: 40px;
+    padding-top: 420px;
 }
 
 div.hero h1,
