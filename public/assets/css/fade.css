@@ -1,0 +1,64 @@
+   /* fading effects: */
+  
+   #logo, #submit, #reset,
+   #footer {
+     animation-name: backfade;
+     animation-duration: 4s;
+     animation-direction: alternate;
+     animation-iteration-count: infinite;
+   }
+   
+   #nav-buttons {
+     animation-name: navfade;
+     animation-duration: 4s;
+     animation-direction: alternate;
+     animation-iteration-count: infinite;
+    }
+   
+   h1,
+   h2,
+   h3 {
+     animation-name: frontfade;
+     animation-duration: 4s;
+     animation-direction: alternate;
+     animation-iteration-count: infinite;
+   }
+   
+    .auth-image, h4{
+      animation-name: backfade;
+      animation-duration: 4s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+   
+   
+    body {
+      animation-name: shadowfade;
+      animation-duration: 4s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+   
+    @keyframes backfade {
+      from {background-color: rgba(71, 61, 139, 0.500);}
+   
+      to {background-color: rgba(5, 5, 5, 0.650);}
+    }
+   
+    @keyframes frontfade {
+     from {color: rgba(71, 61, 139, 1);}
+   
+      to {color: rgb(5, 5, 5);}
+    }
+   
+    @keyframes shadowfade {
+     from {text-shadow: 2px 2px 5px black}
+   
+     to {text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.329)}
+   }
+   
+   @keyframes navfade {
+     from {text-shadow: 2px 2px 5px darkslateblue}
+   
+     to {text-shadow: 2px 2px 5px black}
+   }
