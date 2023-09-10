@@ -5,9 +5,9 @@
 body {
     /* font-size: 10px; */
     /* font-family: Tahoma, Arial; */
-    font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(10px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
-    
+
     font-family: 'Open Sans', sans-serif;
     background: url("../images/bg.png");
     color: #777777;
