@@ -39,6 +39,13 @@
       animation-iteration-count: infinite;
     }
    
+    #disclaimer {
+        animation-name: disclaimer_fade;
+        animation-duration: 4s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+
     @keyframes backfade {
       from {background-color: rgba(71, 61, 139, 0.500);}
    
@@ -62,3 +69,9 @@
    
      to {text-shadow: 2px 2px 5px black}
    }
+
+   @keyframes disclaimer_fade {
+    from {background-color: rgba(163, 2, 2, 0.5);}
+ 
+    to {background-color: rgba(5, 5, 5, 0.650);}
+  }
