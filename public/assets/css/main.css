@@ -113,3 +113,13 @@ main article {
         margin: 10px;
     }
 }
+
+#footer {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    font-size: 0.6rem;
+    color: #cccccc;
+    text-align: center;
+    background: #666666;
+    border-top: 4px solid rgba(71, 61, 139, 0.5);
+  }
