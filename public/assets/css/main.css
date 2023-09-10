@@ -128,14 +128,17 @@ main article {
     border-top: 4px solid rgba(71, 61, 139, 0.5);
   }
 
-  #disclaimer {
-        width: 50%;
-  }
+#disclaimer {
+    width: 85%;
+}
+
 
 table {
     border-collapse: collapse;
+    padding: 33%;
  }
 
  td, th {
     border: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 3px;
  }
