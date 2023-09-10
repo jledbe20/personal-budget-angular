@@ -13,10 +13,6 @@ body {
     color: #777777;
 }
 
-p:last-child {
-    margin-bottom: 0;
-}
-
 nav {
     width: 100%;
     /* background-color: #4d5791; */
@@ -50,8 +46,9 @@ nav ul li a:hover  {
 
 div.hero {
     height: 350px;
-    background-color: #b4c6f0;
-    background-image: url('../images/bg2.png');
+    /* background-color: #b4c6f0; */
+    background-color: gray;
+    background-image: url('../images/puter.png');
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -62,6 +59,7 @@ div.hero h1,
 div.hero h2 {
     text-align: center;
     margin: 0;
+    padding: 5px;
 }
 
 div.hero h1 {
