@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>About | Jon Ledbetter</title>
+  <title>Contact | Jon Ledbetter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css">
@@ -33,28 +33,36 @@
 
   <div id="main-container" class="container">
     <section class="main-section">
-      <h1 class="header">About Me</h1>
+      <h1 class="header">Contact</h1>
 
-      <img id="me" src="assets/images/jon.png" class="auth-image" alt="Your Name">
-
-      <p>Well versed in numerous aspects of the computer science field, including but not limited to programming,
-        maintenance, technical support and applied theory. Have received current A+ certification from CompTIA. 
-        In addition to technical ability, possess exceptional written and verbal communication skills, and have 
-        consistently achieved high levels of client satisfaction. Natural problem solver, quick learner, adaptable 
-        and challenge motivated. Recently earned certification in full-stack web development from a prestigious and 
-        accredited university.</p>
-      
-      <p>Enjoys books, film and videogames when met with "spare" time.</p><br>
-
-      <p>Click <a href="assets/resume/Resume_Jon_Ledbetter_2022.pdf" id="resume_link" alt="Resume Here!">here</a> to
-        download my resumé!</p>
-
+      <form id="contact-form" action="mailto:jon.ledbetter@gmail.com" method="post" enctype="text/plain">
+        <ul>
+          <li>
+            <label for="name">Name</label>
+            <input class="text-light bg-dark" type="text" id="name" name="name" placeholder="John Smith"
+              required="required">
+          </li>
+          <li>
+            <label for="email">E-mail</label>
+            <input class="text-light bg-dark" type="email" id="email" name="email" placeholder="example@gmail.com"
+              required="required">
+          </li>
+          <li>
+            <label for="message">Message</label>
+            <textarea class="text-light bg-dark" id="message" name="message" required="required"></textarea>
+          </li>
+        </ul>
+        <div id="buttons">
+          <input class="button" type="submit" id="submit" value="Send">
+          <input class="button" type="reset" id="reset" value="Reset">
+        </div>
+      </form>
     </section>
   </div>
 
   <div id="footer" class="container">
-    Copyright &copy;
-  </div>
+      Copyright &copy;
+    </div>
 </body>
 
 </html>
