@@ -13,9 +13,14 @@ body {
     color: #777777;
 }
 
+p:last-child {
+    margin-bottom: 0;
+}
+
 nav {
     width: 100%;
-    background-color: #4d5791;
+    /* background-color: #4d5791; */
+    background-color: darkslateblue;
     height: 44px;
     padding: 0 40px;
 }
