@@ -49,7 +49,7 @@ div.hero {
     height: 520px;
     /* background-color: #b4c6f0; */
     background-color: rgba(128, 128, 128, 0.303);
-    background-image: url('../images/puter.jpg');
+    /* background-image: url('../images/puter.jpg'); */
     background-size: 420px;
     background-repeat: no-repeat;
     background-position: center bottom;
