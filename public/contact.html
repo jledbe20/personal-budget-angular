@@ -37,7 +37,8 @@
     <section class="main-section">
       <h1 class="header">Contact</h1>
 
-      <form id="contact-form" action="mailto:jon.ledbetter@gmail.com" method="post" enctype="text/plain">
+      <!-- This is an A11y Change -->
+      <form id="contact-form" role="contact form" action="mailto:jon.ledbetter@gmail.com" method="post" enctype="text/plain">
         <ul>
           <li>
             <label for="name">Name</label>
@@ -54,9 +55,11 @@
             <textarea class="text-light bg-dark" id="message" name="message" required="required"></textarea>
           </li>
         </ul>
+
+        <!-- This is an A11y Change -->
         <div id="buttons">
-          <input class="button" type="submit" id="submit" value="Send">
-          <input class="button" type="reset" id="reset" value="Reset">
+          <input class="button" role="submit" type="submit" id="submit" value="Send">
+          <input class="button" role="reset" type="reset" id="reset" value="Reset">
         </div>
       </form>
       <br>
