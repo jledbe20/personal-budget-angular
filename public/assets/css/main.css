@@ -13,6 +13,15 @@ body {
     color: #777777;
 }
 
+.center {
+    text-align: center;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
 nav {
     width: 100%;
     /* background-color: #4d5791; */
@@ -98,10 +107,6 @@ footer {
 
 .skip:focus {
     margin-top: 0;
-}
-
-.center {
-    text-align: center;
 }
 
 main article {
