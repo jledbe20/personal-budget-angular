@@ -5,6 +5,8 @@
 body {
     /* font-size: 10px; */
     /* font-family: Tahoma, Arial; */
+
+    /* This is an A11y Change */
     font-size: calc(8px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
 
@@ -24,8 +26,11 @@ body {
  }
 
  #puter_img{
-    /* width: 375px; */
-    height: 375px;
+    width: 40%;
+    max-width: 488px;
+    height: auto;
+    max-height: 375px;
+    padding: 5px;
  }
 
 nav {
@@ -58,6 +63,7 @@ nav ul li a {
 nav ul li a:hover  {
     background-color: white;
     color: #4d5791;
+    text-decoration: underline;
 }
 
 div.hero {
@@ -86,6 +92,7 @@ div.hero h1 {
 
 div.hero h2 {
     color: #4d5791;
+    margin-bottom: 10px;
 }
 
 main {
@@ -132,7 +139,7 @@ main article {
 #footer {
     width: 100%;
     padding: 10px 0 10px 0;
-    font-size: 0.6rem;
+    font-size: 1rem;
     color: #cccccc;
     text-align: center;
     background: #666666;
