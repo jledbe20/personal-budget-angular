@@ -37,6 +37,7 @@ p {
     height: auto;
     max-height: 370px;
     padding: 5px;
+    object-fit: contain;
  }
 
 nav {
