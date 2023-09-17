@@ -23,11 +23,11 @@
 
     <nav id="masthead">
         <ul>
-            <li><a href="/pb/public">Home</a></li>
-            <li><a href="/pb/public/about.html">About</a></li>
-            <li><a href="/pb/public/login.html">Login</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/login.html">Login</a></li>
             <li><a href="https://jtledbet.github.io/portfolio.html">Other Projects</a></li>
-            <li><a href="/pb/public/contact.html">Contact</a></li>
+            <li><a href="/contact.html">Contact</a></li>
             <li><a href="https://google.com">Google</a></li>
         </ul>
     </nav>
@@ -124,12 +124,12 @@
                 </p>
             </article>
     
-            <!-- <article>
+            <article>
                 <h1>Chart</h1>
                 <p>
                     <canvas id="myChart" width="400" height="400"></canvas>
                 </p>
-            </article> -->
+            </article>
             
 
             <!-- This is a Semantic HTML Change that doesn't work for some reason -->
@@ -145,14 +145,15 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" integrity="sha512-7U4rRB8aGAHGVad3u2jiC7GA5/1YhQcQjxKeaVms/bT66i3LVBMRcBI9KwABNWnxOSwulkuSXxZLGuyfvo7V1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.js" integrity="sha512-6HrPqAvK+lZElIZ4mZ64fyxIBTsaX5zAFZg2V/2WT+iKPrFzTzvx6QAsLW2OaLwobhMYBog/+bvmIEEGXi0p1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
         var dataSource = {
                 datasets: [
                     {
-                        data: [],
+                        data: [30, 350, 90],
                         backgroundColor: [
                             '#ffcd56',
                             '#ff6384',
@@ -161,13 +162,17 @@
                         ]
                     }
                 ],
-                labels: []
+                labels: [
+                        'Eat out',
+                        'Rent',
+                        'Groceries'
+                ]
             };
 
         function createChart() {
             var ctx = document.getElementById('myChart').getContext('2d');
             var myPieChart = new Chart(ctx, {
-                type: 'pie',
+                type: 'doughnut',
                 data: dataSource
             });
         }
@@ -175,11 +180,12 @@
         function getBudget() {
             axios.get('http://localhost:3000/budget')
             .then(function (res) {
+                console.log(res);
                 for (var i = 0; i < res.data.myBudget.length; i++) {
                     dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
                     dataSource.labels[i] = res.data.myBudget[i].title;
-                    createChart();
                 }
+                createChart();
             });
         }
 

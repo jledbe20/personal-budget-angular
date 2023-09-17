@@ -1,0 +1,17 @@
+{
+    "name": "budget",
+    "title": "1.0.0",
+    "description": "The path to NGInx main folder: /usr/share/nginx/html",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js",
+      "jon": "echo Jon"
+},
+
+{
+    "budget: {
+        title: "eat out",
+        budget: 25;
+    }"
+}
