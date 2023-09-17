@@ -1,31 +1,18 @@
-const express = require('express')
+const express = require('express');
+const bodyParser = require('body-parser');
+const fs = require('fs');
+const cors = require('cors');
+
 const app = express();
 const port = 3000;
 
+app.use(bodyParser.json());
+app.use(cors());
 app.use('/' , express.static('public'));
 
-const budget = {
-    myBudget: [
-        {
-            title: 'Eat out',
-            budget: 25
-        },
-        {
-            title: 'Rent',
-            budget: 375
-        },
-        {
-            title: 'Grocery',
-            budget: 110
-        },
-    ]
-};
-
-// const budget = fetch('/budget.json')
-//     .then((response) => response.json())
-//     .then((json) => console.log(json));
-
-// const budget = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
+const budget_file = require("./budget.json");
+var budget = budget_file;
+console.log(budget_file);
 
 app.get('/budget', (req, res) => {
     res.json(budget);

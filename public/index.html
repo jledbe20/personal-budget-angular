@@ -125,7 +125,7 @@
             </article>
     
             <article>
-                <h1>Chart</h1>
+                <h1>Monthly Budget</h1>
                 <p>
                     <canvas id="myChart" width="400" height="400"></canvas>
                 </p>
@@ -172,7 +172,7 @@
         function createChart() {
             var ctx = document.getElementById('myChart').getContext('2d');
             var myPieChart = new Chart(ctx, {
-                type: 'doughnut',
+                type: 'pie',
                 data: dataSource
             });
         }
@@ -181,9 +181,9 @@
             axios.get('http://localhost:3000/budget')
             .then(function (res) {
                 console.log(res);
-                for (var i = 0; i < res.data.myBudget.length; i++) {
-                    dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
-                    dataSource.labels[i] = res.data.myBudget[i].title;
+                for (var i = 0; i < res.data.budget_items.length; i++) {
+                    dataSource.datasets[0].data[i] = res.data.budget_items[i].cost;
+                    dataSource.labels[i] = res.data.budget_items[i].item;
                 }
                 createChart();
             });
@@ -192,11 +192,7 @@
         getBudget();
     </script>
 
-<!-- This is a Semantic HTML Change -->
 
-<!-- This is an SEO Change -->
-
-<!-- This is an A11y Change -->
 
 </body>
 </html>
