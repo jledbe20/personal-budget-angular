@@ -27,14 +27,11 @@
 
 <body>
     <button class="randomize">randomize</button>
-    <button class="nonrandomize">pull from JSON</button>
-
 
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
         integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <script>
 
         var svg = d3.select("body")
@@ -75,32 +72,47 @@
             .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
         function randomData() {
-            var labels = color.domain();
-            return labels.map(function (label) {
-                return { label: label, value: Math.random() }
-            });
+            console.log("newBudget(): ", newBudget());
+            var budgetData = newBudget();
+            console.log("budgetData: ", budgetData);
+            // return budgetData.map(function (budgetData) {
+            //     return { label: label, value: value }
+            // });
+
+            return(newBudget());
         }
 
-        function newData() {
-            axios.get('new_budget')
+        function newBudget() {
+            axios.get('http://localhost:3000/new_budget')
                 .then(function (res) {
-                    // Extract the data from the response
-                    const jsonData = res.data;
-                    console.log(jsonData);
-                    // Call the change function with the extracted data
-                    change(jsonData);
-                })
-                .catch(function (error) {
-                    console.error('Error fetching JSON data:', error);
+                    console.log("inside the newBudget function! \n", res);
+
+                    
+                    var labels = res.map(item => item.label);
+                    var values = res.map(item => item.value);
+
+                    for (const item of res) {
+                        labels.push(item.label);
+                        values.push(item.value);
+                        console.log(item.label, item.value)
+                    }
+
+                    console.log('Labels:', labels);
+                    console.log('Values:', values);
+
+                    budgetDataMap = budgetData.map(function (res) {
+                        return { label: label, value: value }
+                    })
+                    console.log(budgetDataMap);
+                    return budgetData.map(function (res) {
+                        return { label: label, value: value }
+                    });
                 });
+
         }
 
-        change(randomData());
-
-        d3.select(".nonrandomize")
-            .on("click", function () {
-                change(newData());
-            });
+        // change(randomData());
+        change(newBudget());
 
         d3.select(".randomize")
             .on("click", function () {
