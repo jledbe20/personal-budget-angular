@@ -14,7 +14,9 @@ app.use(cors());
 app.use('/' , express.static('public'));
 
 const budget_file = require("./budget.json");
+const budget_file2 = require("./budget2.json");
 var budget = budget_file;
+var budget2 = budget_file2;
 // console.log(budget_file);
 
 app.get('/budget', (req, res) => {
@@ -27,8 +29,8 @@ app.get("/new_chart", (req, res) => {
 });
 
 app.get('/new_budget', (req, res) => {
-    budget = budget_file;
-    res.json(budget);
+    budget2 = budget_file2;
+    res.json(budget2);
 });
 
 app.get('/hello', (req, res) => {

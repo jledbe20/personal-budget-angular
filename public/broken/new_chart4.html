@@ -71,28 +71,41 @@
             .domain(["Lorem ipsum", "dolor sit", "amet", "consectetur", "adipisicing", "elit", "sed", "do", "eiusmod", "tempor", "incididunt"])
             .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
-        var budget = d3.scale.ordinal()
-            .domain(["items"])
-            .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"])
+        // var budget = d3.scale.ordinal()
+        //     .domain([]) = getBudget();
+
 
         function randomData() {
+            budget = getBudget();
+            console.log(budget);
+
+            d3.json('budget2.json')
+                .then(function (error, data) {
+                    console.log('JSON data:', data);
+                    // Process the data or use it as needed
+                })
+                .catch(function (error) {
+                    console.error('Error loading JSON file:', error);
+                });
+
             var labels = budget.domain();
-            var value = budget.range();
             return labels.map(function (label) {
                 return { label: label, value: value }
             });
         }
 
+        // function randomData (){
+        // 	var labels = color.domain();
+        // 	return labels.map(function(label){
+        // 		return { label: label, value: Math.random() }
+        // 	});
+        // }
+
         function getBudget() {
-            
-            axios.get('http://localhost:3000/new_budget')
+            axios.get('http://localhost:3000/budget')
                 .then(function (res) {
+                    return res;
                     console.log(res);
-                    for (var i = 0; i < res.data.budget_items.length; i++) {
-                        budget.domain[0].data[i] = res.data.budget_items[i].cost;
-                        budget.range[i] = res.data.budget_items[i].item;
-                    }
-                    createChart();
                 });
         }
 
