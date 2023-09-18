@@ -1,20 +1,33 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
+var path = require("path");
 const cors = require('cors');
 
 const app = express();
 const port = 3000;
 
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 app.use(cors());
 app.use('/' , express.static('public'));
 
 const budget_file = require("./budget.json");
 var budget = budget_file;
-console.log(budget_file);
+// console.log(budget_file);
 
 app.get('/budget', (req, res) => {
+    budget = budget_file;
+    res.json(budget);
+});
+
+app.get("/new_chart", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/new_chart.html"));
+});
+
+app.get('/new_budget', (req, res) => {
+    budget = budget_file;
     res.json(budget);
 });
 
