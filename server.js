@@ -1,3 +1,5 @@
+// Budget API
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
@@ -38,5 +40,5 @@ app.get('/hello', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}...`);
+    console.log(`API listening at http://localhost:${port}...`);
 });
