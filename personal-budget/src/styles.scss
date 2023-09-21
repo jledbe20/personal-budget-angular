@@ -40,7 +40,7 @@ main {
  */
 
 h1 {
-  font-size: 2em;
+  // font-size: 2em;
   margin: 0.67em 0;
 }
 
@@ -359,8 +359,8 @@ body {
   /* font-family: Tahoma, Arial; */
 
   /* This is an A11y Change */
-  font-size: calc(8px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+  // font-size: calc(8px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  // line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
 
   font-family: 'Open Sans', sans-serif;
   background: url("assets/images/bg.png");
@@ -368,10 +368,10 @@ body {
 }
 
   /* This is an A11y Change */
-p {
-  font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
-}
+// p {
+//   font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+//   line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+// }
 
 .center {
   text-align: center;

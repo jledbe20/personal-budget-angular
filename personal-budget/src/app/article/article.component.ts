@@ -7,7 +7,7 @@ import { Component, Input} from '@angular/core';
 })
 export class ArticleComponent {
 
-  @Input() title = 'Title';
-  @Input() content = 'Content';
-  
+  // @Input() title = 'Title';
+  // @Input() content = 'Content';
+
 }

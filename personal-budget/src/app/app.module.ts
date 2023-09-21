@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { P404Component } from './p404/p404.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { BudgetChartComponent } from './budget-chart/budget-chart.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +26,12 @@ import { ContactComponent } from './contact/contact.component';
     P404Component,
     AboutComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    BudgetChartComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
