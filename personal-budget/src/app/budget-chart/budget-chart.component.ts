@@ -43,20 +43,23 @@ export class BudgetChartComponent {
     })
   }
 
-
   createChart() {
-    // var ctx = document.getElementById('myChart').getContext('2d');
-    // var ctx = HTMLCanvasElement.getElementById('myChart');
-    // test:
-    // var ctx = HTMLCanvasElement;
-    // test 2:
-    // var ctx = new HTMLCanvasElement('myChart').getContext('2d');
-    // test 3:
-    // var ctx = new HTMLCanvasElement().getContext('2d');
-    // var myPieChart = new Chart(ctx, {
-    //     type: 'pie',
-    //     data: this.dataSource
-    // });
+    var canvas = document.getElementById('myChart') as HTMLCanvasElement;
 
+    if (canvas) {
+        var ctx = canvas.getContext('2d');
+
+        if (ctx) {
+            var myPieChart = new Chart(ctx, {
+                type: 'pie',
+                data: this.dataSource
+            });
+        } else {
+            console.error('Could not get 2D context for the canvas.');
+        }
+    } else {
+        console.error('Canvas element with ID "myChart" not found.');
+    }
   }
 }
+

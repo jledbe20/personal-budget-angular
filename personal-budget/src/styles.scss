@@ -521,6 +521,20 @@ td, th {
   padding: 3px;
 }
 
+
+#main-container {
+  padding-top: 130px;
+  min-height: calc(100vh - 70px);
+  max-width: 960px;
+}
+
+.main-section {
+  width: 100%;
+  max-width: 960px;
+  padding: 30px;
+  margin: 0 0 40px;
+}
+
 /* about page */
 
 #me {

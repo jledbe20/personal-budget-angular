@@ -19,7 +19,7 @@ const budget_file = require("./budget.json");
 const budget_file2 = require("./budget2.json");
 var budget = budget_file;
 var budget2 = budget_file2;
-// console.log(budget_file);
+console.log(budget_file);
 
 app.get('/budget', (req, res) => {
     budget = budget_file;
