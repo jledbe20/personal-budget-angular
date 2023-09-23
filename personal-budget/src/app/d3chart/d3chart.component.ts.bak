@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
 
+/* working example of a D3JS chart in Angular */
+
 @Component({
   selector: 'pb-d3chart',
   templateUrl: './d3chart.component.html',

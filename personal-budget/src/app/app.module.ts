@@ -15,7 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { BudgetChartComponent } from './budget-chart/budget-chart.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
-// import { D3chartComponent } from './d3chart/d3chart.component';
+import { D3ChartComponent } from './d3chart/d3chart.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
     ContactComponent,
     BudgetChartComponent,
     BreadcrumbsComponent,
-    // D3chartComponent
+    D3ChartComponent
   ],
   imports: [
     BrowserModule,

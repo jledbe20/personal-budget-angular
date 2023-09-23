@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { BudgetChartComponent } from './budget-chart/budget-chart.component';
 import { ContactComponent } from './contact/contact.component';
 import { P404Component } from './p404/p404.component';
+import { D3ChartComponent } from './d3chart/d3chart.component';
 
 const routes: Routes = [] = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [] = [
   {
     path: 'chart',
     component: BudgetChartComponent,
+  },
+  {
+    path: 'd3chart',
+    component: D3ChartComponent,
   },
   {
     path: 'contact',

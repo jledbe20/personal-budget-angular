@@ -387,7 +387,7 @@ body {
   width: 75%;
   max-width: 488px;
   height: auto;
-  max-height: 370px;
+  max-height: 330px;
   padding: 5px;
   object-fit: contain;
 }
@@ -523,7 +523,7 @@ td, th {
 
 
 #main-container {
-  padding-top: 130px;
+  // padding-top: 130px;
   min-height: calc(100vh - 70px);
   max-width: 960px;
 }
