@@ -6,7 +6,6 @@ import * as d3 from 'd3';
 @Component({
   selector: 'pb-budget-chart',
   templateUrl: './budget-chart.component.html',
-  // template: '<div id="myChart" style="width:400px; height:400px">',
   styleUrls: ['./budget-chart.component.scss']
 })
 export class BudgetChartComponent {
@@ -19,6 +18,12 @@ export class BudgetChartComponent {
           '#ff6384',
           '#36a2eb',
           '#fd6b19',
+          '#cbbc1e',
+          '#0c8b1a',
+          '#541ecb',
+          '#1eb5cb',
+          '#ffffff',
+          '#000000',
         ]
       }
     ],
