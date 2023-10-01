@@ -18,9 +18,9 @@ export class D3ChartComponent implements OnInit {
   //   { name: 'D', value: 40 },
   // ];
   private svg: any;
-  private margin = { top: 20, right: 20, bottom: 30, left: 40 };
 
-  // width/height is for bar chart:
+  // width/height and margin is for bar chart:
+  // private margin = { top: 20, right: 20, bottom: 30, left: 40 };
   // private width = 500 - this.margin.left - this.margin.right;
   // private height = 400 - this.margin.top - this.margin.bottom;
 
@@ -34,13 +34,6 @@ export class D3ChartComponent implements OnInit {
       this.initPieChart();
     });
   }
-  // old sample data:
-  // private data = [
-  //   {name: 'A', value: 10},
-  //   {name: 'B', value: 20},
-  //   {name: 'C', value: 30},
-  //   {name: 'D', value: 40},
-  // ];
 
   initPieChart(): void {
     const width = 500;  // Set desired width
