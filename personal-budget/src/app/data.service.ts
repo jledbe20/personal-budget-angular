@@ -17,6 +17,7 @@ export class DataService {
     // then it won't make the call, and
     // sends the cached data instead.
     if (this.cachedData) {
+      console.log("from the cache: ", this.cachedData)
       return of(this.cachedData);
     }
 
@@ -24,6 +25,7 @@ export class DataService {
       // saves the retrieved data into a cache.
       tap(data => {
         this.cachedData = data;
+        console.log("to the cache: ", this.cachedData)
       })
     );
   }
